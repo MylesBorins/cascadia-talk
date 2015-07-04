@@ -7,16 +7,42 @@ html
 
     link(rel='stylesheet', type='text/css', href='build/build.css')
 
+  style.
+    .breakfast {
+      background-image: url('images/breakfast-machine.gif')
+    }
+
+    .kinetic {
+      background-image: url('images/kinetic-installation.gif')
+    }
+
+    .domino {
+      background-image: url('images/domino.gif')
+    }
+
   body
 
     article
 
       section
-        h1 It's not me it's you
+        :markdown
+          #It's not me it's you
+          ###On the Fallability of Large Systems
+          ####With your host Myles Borins
+          #### [@thealphanerd](https://twitter.com/thealphanerd)
 
-      section
-        h2 Keyboard Interaction
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-keys">bespoke-keys</a>
+      section(data-bespoke-backdrop='breakfast')
+        h1 When we write code we create systems
+        
+      section(data-bespoke-backdrop='kinetic')
+        h1 I often think of large software systems as kinetic art
+        
+      section(data-bespoke-backdrop='kinetic')
+        h2 Every piece needs to line up perfectly for the system to work.
+        
+      section(data-bespoke-backdrop='domino')
+        h2 If any part of that system breaks
+        h3 you are going to have a bad time
 
       section
         h2 Touch Interaction
