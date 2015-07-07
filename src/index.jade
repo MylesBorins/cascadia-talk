@@ -19,6 +19,26 @@ html
     .domino {
       background-image: url('images/domino.gif')
     }
+    
+    .music {
+      background-image: url('images/playing-music.jpg')
+    }
+    
+    .string-theory {
+      background-image: url('images/string-theory.jpg')
+    }
+    
+    .developer {
+      background-image: url('images/Myles-develops.png')
+    }
+    
+    .legit {
+      background-image: url('images/legit.png')
+    }
+    
+    .anecdote {
+      background-image: url('images/anecdote.jpg')
+    }
 
   body
 
@@ -27,16 +47,44 @@ html
       section
         :markdown
           #It's not me it's you
-          ###On the Fallability of Large Systems
+          ###On the Fallibility of Large Systems
           ####With your host Myles Borins
           #### [@thealphanerd](https://twitter.com/thealphanerd)
+          cascadiafest 2015
 
       section
-        h1 Let's talk about marketting!
+        h1 Let's talk about Marketing
+
+      section
+        img(src='images/funnel.jpg' alt='marketing funnel')
         
       section
-        img(src='images/funnel.jpg')
-      
+        h1 What do I do?
+
+      section(data-bespoke-backdrop='music')
+        h1 I am a musician
+        
+      section(data-bespoke-backdrop='string-theory')
+        h1 I am an artist
+
+      section(data-bespoke-backdrop='developer')
+        h1 I am a developer
+        
+      section(data-bespoke-backdrop='legit')
+        h1 I am a legitimate public speaker
+
+      section
+        h1 Why should you care?
+
+      section
+        h2 Any Given Element of One System
+        h3 Is Simultaneously an Element in an Infinity of Other Systems
+        h5 The Systems Bible by John Gall
+
+      section
+        a(href='https://twitter.com/ceejbot/status/597605530165739520')
+          img(src='images/systemsbible.jpg' alt='Book cover of The Systems Bible by John Gall')
+
       section(data-bespoke-backdrop='breakfast')
         h1 When we write code we create systems
 
@@ -49,56 +97,103 @@ html
       section(data-bespoke-backdrop='domino')
         h2 If any part of that system breaks
         h3 you are going to have a bad time
+
+      section
+        h2 This was a very important lesson for me to learn
+        h3 Sometimes the part of the system that you are writing is perfectly fine
+        h4 The problem lies somewhere else in the system
+
+      section
+        h1 How do you believe me?
+
+      section(data-bespoke-backdrop='anecdote')
+      
+      section(data-bespoke-backdrop='emphatic')
+        img(src='images/famous_logo.svg' alt='famous' style='background-color:white;')
+      
+      section
+        img(src='images/demo-fails.png' alt='screen cap from github issue when svg broke' width='100%')
+
+      section
+        img(src='images/freakout.gif' alt='my response in gif format, man walks into room on fire. At least he has pizza!')
         
       section
-        h2 Big systems either work on their own or they don't
-        h3 If they don't you can't make them
-        h5 The Systems Bible by John Gall
+        h1 I immediately assumed that we did something wrong.
 
       section
-        a(href='https://twitter.com/ceejbot/status/597605530165739520')
-          img(src='images/systemsbible.jpg' alt='Book cover of The Systems Bible by John Gall')
-
+        h2 I tried testing an older version of the seed project and noticed everything worked
+        h3 I began to theorize that we had introduced a nasty regression into the platform
+        
+      seciton
+        h2 I went into our CEO / CTO's office and told them we might have to push an emergency hotfix
+        h3 That I wouldn't leave until we figured out what was going on
+        
       section
-        h2 Bullet List
-        h3.bullet Powered by <a href="https://github.com/markdalgleish/bespoke-bullets">bespoke-bullets</a>
-        ul
-          li Bullet 1
-          li Bullet 2
-          li Bullet 3
-
+        h2 After a bit of time it hit me
+        h3 Our new seed project was using an svg, and the old one was using a png
+      
       section
-        h2 Syntax Highlighting
-        h3 Powered by <a href="http://twitter.com/LeaVerou">Lea Verou</a>'s <a href="https://github.com/LeaVerou/prism">Prism</a>
-        pre
-          code.language-javascript.
-            bespoke.from('article', [
-              classes(),
-              keys(),
-              touch(),
-              bullets('li, .bullet')
-            ]);
-
-      section(data-bespoke-hash='named-route')
-        h2 Named Route
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-hash">bespoke-hash</a>
-        p Look up! This route has been named with a <em>'data-bespoke-hash'</em> attribute.
-
-      section.emphatic-text(data-bespoke-backdrop='emphatic')
-        h2 Emphatic Slide!
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-backdrop">bespoke-backdrop</a>
-
+        img(src='images/table-flip.gif' alt='a small table is flipped with a single finger')
+        
       section
-        h2.bullet Just the beginning...
-        br
-        ul
-          li Edit <a href="http://jade-lang.com/">Jade</a> markup in <em>'src/index.jade'</em>
-          li Edit <a href="http://learnboost.github.io/stylus/">Stylus</a> styles in <em>'src/styles/main.styl'</em>
-          li Edit JavaScript in <em>'src/scripts/main.js'</em>
-        br
-        ul
-          li
-            strong Enjoy! :)
-            a(href='http://twitter.com/markdalgleish')  -@markdalgleish
+        img(src='images/svg-broke.png' alt='screen grab from github thread about broken svg' width='100%')
+        
+      section
+        img(src='images/firefox-bugzilla.png' alt='screen grab from bugzilla thread about broken svg' width='100%')
+      
+      section
+        h2 While the bug was fixed within 10 days
+        h2 it took until Jan 13th for firefox 35 to land
+        
+      section
+        h2 For a month and a half anyone writing symantically correct code
+        h3 would get a broken result
+        
+      section
+        img(src='images/heart-mozilla.png' alt='we really do love mozilla')
+        
+      section
+        h2 As Systems Grow in Size and Complexity
+        h3 They Tend to Lose Basic Functions
+        h4 The Systems Bible by John Gall
+        
+      section
+        h1 Where do we begin?
+        
+      section
+        h1 Chokidar
+      //- section
+      //-   h2 Syntax Highlighting
+      //-   h3 Powered by <a href="http://twitter.com/LeaVerou">Lea Verou</a>'s <a href="https://github.com/LeaVerou/prism">Prism</a>
+      //-   pre
+      //-     code.language-javascript.
+      //-       bespoke.from('article', [
+      //-         classes(),
+      //-         keys(),
+      //-         touch(),
+      //-         bullets('li, .bullet')
+      //-       ]);
+
+      //- section(data-bespoke-hash='named-route')
+      //-   h2 Named Route
+      //-   h3 Powered by <a href="https://github.com/markdalgleish/bespoke-hash">bespoke-hash</a>
+      //-   p Look up! This route has been named with a <em>'data-bespoke-hash'</em> attribute.
+
+      //- section.emphatic-text(data-bespoke-backdrop='emphatic')
+//-         h2 Emphatic Slide!
+//-         h3 Powered by <a href="https://github.com/markdalgleish/bespoke-backdrop">bespoke-backdrop</a>
+
+      //- section
+      //-   h2.bullet Just the beginning...
+      //-   br
+      //-   ul
+      //-     li Edit <a href="http://jade-lang.com/">Jade</a> markup in <em>'src/index.jade'</em>
+      //-     li Edit <a href="http://learnboost.github.io/stylus/">Stylus</a> styles in <em>'src/styles/main.styl'</em>
+      //-     li Edit JavaScript in <em>'src/scripts/main.js'</em>
+      //-   br
+      //-   ul
+      //-     li
+      //-       strong Enjoy! :)
+      //-       a(href='http://twitter.com/markdalgleish')  -@markdalgleish
 
     script(src='build/build.js')
