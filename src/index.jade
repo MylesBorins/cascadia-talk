@@ -59,6 +59,22 @@ html
     .time-travel {
       background-image: url('images/hack-time.gif')
     }
+    
+    .fail {
+      background-image: url('images/fail.gif')
+    }
+    
+    .fail-too {
+      background-image: url('images/fail-too.gif')
+    }
+    
+    .uatu {
+      background-image: url('images/uatu.jpg')
+    }
+    
+    .bisect {
+      background-image: url('images/bisect.gif')
+    }
 
   body
 
@@ -198,7 +214,7 @@ html
           img(src='images/chokidar-repo.png' alt='a screen capture from the chokidar repo' width='50%')
 
       section
-        h1 Why do we have to shim fs.watch?
+        h1 Why do we have to wrap fs.watch?
       
       section(data-bespoke-backdrop='badger')
         h1 File watching on OSX is not POSIX standard
@@ -264,11 +280,90 @@ html
       
       section(data-bespoke-backdrop='time-travel')
         h1 Let's go back in time
+      
+      section
+        h3 Our Team is using Browserify + Watchify for All the things!
+        img(src='images/browserify.png' alt='browserify logo')
+
+      section
+        h3 We are also making lots of modules 
+        h3 and using npm link to wire them up in development
+        img(src='images/npm-logo.svg' alt='npm logo')
+        
+      section
+        h2 This makes lot of
+        h3 SYMBOLIC LINKS!!!!
+        
+      section(data-bespoke-backdrop='fail')
+        h1 One day everything decided to stop working!
+      
+      secition(data-bespoke-backdrop='fail')
+        h2 Our Developers are having to refresh their dev servers randomly due to strange bugs
+      
+      section
+        h3 It Turns out watching symbolic links stopped working!
+        img(src='images/watchify-stops-working.png' alt='screen cap from github thread of watchify no longer working' width='50%')
+        
+      section
+        h3 Which aparently hasn't worked in chokidar ever
+        img(src='images/chokidar-feature-request.png' alt='original feature request for symlink watching' width='50%')
+        
+      section
+        h3 Except for when it did start working accidentally
+        img(src='images/fixed-for-free.png' alt='turns out this got fixed in node, but not in fsevents' width='50%')
+        h4 As long as you are not using fsevents on OSX
 
       section(data-bespoke-backdrop='emphatic')
         h2 Go home Chokidar
         h3 you are drunk
         img(src='images/derpmander.gif' alt='a derpy charmander' height='60%')
+        
+      section(data-bespoke-backdrop='uatu')
+        h1 Enter Uatu
+        
+      section
+        h3 Uatu was a unity test suite to test each layer of the stack for filewatching
+        pre
+          code.language-javascript.
+            test('symlink: fsevents', function(t) {
+              t.plan(1);
+              var watcher = fsevents(indexer(origin));
+              watcher.on('change', function (path, info) {
+                watcher.stop();
+                t.ok(path);
+                console.log(path);
+                console.log(info);
+              });
+              watcher.start();
+            });
+      
+      section
+        h3 Knowing that an earlier version of watchify (0.8.1) worked
+        h4 I could use this unit test suite
+        h4 along with git bisect
+        h4 to sniff out the broken commit
+      
+      section(data-bespoke-backdrop='bisect')
+        h1 What is bisect?
+        
+      section
+        img(src='images/pot-of-gold.png' alt='sweet success I found the bug!' width='70%')
+        
+      section
+        img(src='images/nailed-it-chokidar.png' alt='they agree!' width='70%')
+      
+      section
+        h3 So it is an easy fix once you know what to look for!
+        img(src='images/easy-fix.png' alt='easy to fix when you know what is broken!' width='70%')
+        
+      section
+        h3 An update to fix watchify!
+        img(src='images/fix-watchify.png' alt='bump dep and fix watchify!' width='70%')
+
+      section
+        h3 Closing 2 year old issues!
+        img(src='images/closing-issues-chokidar.png' alt='closing those 2 year old issues!' width='70%')
+        
         
       //- section
       //-   h2 Syntax Highlighting
