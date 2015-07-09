@@ -47,6 +47,10 @@ html
     .ogre {
       background-image: url('images/ogre.gif')
     }
+    
+    .libuv {
+      background-image: url('images/libuv.png')
+    }
 
   body
 
@@ -210,14 +214,36 @@ html
       section
         h1 I'm Positive about POSIX
       
+      section(data-bespoke-backdrop='libuv')
+        h3 "libuv wants to be agnostic to some platform specific nuances"
+        h4 Rough quote of what Forrest told me at a Dance.js
+
+      section
+        h3 Consequences for fs.watch on OSX?
+        ul
+          li only poll based
+          li Doesn't report filenames
+          li Doesn't report events at all when using editors like Sublime.
+          li Often reports events twice.
+          li Emits most changes as rename
+          li Does not provide an easy way to recursively watch file trees.
+
+      section
+        h3 Consequences for fs.watchFile
+        ul
+          li Almost as bad at event handling.
+          li Also does not provide any recursive watching.
+          li Results in high CPU utilization.
+
+
       section(data-bespoke-backdrop='ogre')
         h2 Layers like an ogre
         ul
-          li Native File System Watching
-          li LibUV
-          li Node.js
-          li fsevents
-          li chokidar
+          li Native File System Watching (not POSIX compliant on OSX)
+          li libuv (does nothing special for OSX)
+          li Node.js (inherits problems for libuv)
+          li fsevents (natively compiled module for osx)
+          li chokidar (shim fsevents when neccessary)
 
       section
         h3 A slightly less seizure inducing flow graph
