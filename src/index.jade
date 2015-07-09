@@ -39,6 +39,14 @@ html
     .anecdote {
       background-image: url('images/anecdote.jpg')
     }
+    
+    .deep-dive {
+      background-image: url('images/deep-dive.gif')
+    }
+    
+    .ogre {
+      background-image: url('images/ogre.gif')
+    }
 
   body
 
@@ -124,7 +132,7 @@ html
         h2 I tried testing an older version of the seed project and noticed everything worked
         h3 I began to theorize that we had introduced a nasty regression into the platform
         
-      seciton
+      section
         h2 I went into our CEO / CTO's office and told them we might have to push an emergency hotfix
         h3 That I wouldn't leave until we figured out what was going on
         
@@ -176,6 +184,49 @@ html
       section
         a.no-underline(href='https://github.com/paulmillr/chokidar')
           img(src='images/chokidar-repo.png' alt='a screen capture from the chokidar repo' width='50%')
+
+      section
+        h1 Why do we have to shim fs.watch?
+        
+      section(data-bespoke-backdrop='deep-dive')
+        h2 Let's take a deep dive
+      
+      section
+        h1 File watching on OSX is not POSIX standard
+      
+      section
+        h3 I know this because Forrest told me
+        a.no-underline.headroom(href='https://twitter.com/othiym23')
+          img(src='images/forrest.png' alt='this is forrest' width='50%')
+
+      section
+        h2 POSIX is a set of IEEE standards
+        h3 It's design is to uniform system level apis
+        h3 Across Unix'y operating systems
+      
+      section
+        img(src='images/wat.jpg' alt='Beaker from the muppets saying wat, because he does not understand POSIX either' width='50%')
+
+      section
+        h1 I'm Positive about POSIX
+      
+      section(data-bespoke-backdrop='ogre')
+        h2 Layers like an ogre
+        ul
+          li Native File System Watching
+          li LibUV
+          li Node.js
+          li fsevents
+          li chokidar
+
+      section
+        h3 A slightly less seizure inducing flow graph
+        img(src='images/watching-web.jpg' alt='a flow graph of what is going on in the dep tree' width='50%')
+
+      section
+        h2 Every Picture Tells a Story
+        h3 But Not the same Story
+        h4 The Systems Bible by John Gall
 
       section(data-bespoke-backdrop='emphatic')
         h2 Go home Chokidar
