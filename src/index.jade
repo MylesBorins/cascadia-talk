@@ -51,6 +51,14 @@ html
     .libuv {
       background-image: url('images/libuv.png')
     }
+    
+    .badger {
+      background-image: url('images/badger.gif')
+    }
+
+    .time-travel {
+      background-image: url('images/hack-time.gif')
+    }
 
   body
 
@@ -191,12 +199,12 @@ html
 
       section
         h1 Why do we have to shim fs.watch?
-        
-      section(data-bespoke-backdrop='deep-dive')
-        h2 Let's take a deep dive
+      
+      section(data-bespoke-backdrop='badger')
+        h1 File watching on OSX is not POSIX standard
       
       section
-        h1 File watching on OSX is not POSIX standard
+        img(src='images/wat.jpg' alt='Beaker from the muppets saying wat, because he does not understand POSIX either' width='50%')
       
       section
         h3 I know this because Forrest told me
@@ -204,15 +212,12 @@ html
           img(src='images/forrest.png' alt='this is forrest' width='50%')
 
       section
-        h2 POSIX is a set of IEEE standards
-        h3 It's design is to uniform system level apis
-        h3 Across Unix'y operating systems
-      
-      section
-        img(src='images/wat.jpg' alt='Beaker from the muppets saying wat, because he does not understand POSIX either' width='50%')
+        h1 I'm Positive about POSIX
 
       section
-        h1 I'm Positive about POSIX
+        h2 POSIX is a set of IEEE standards
+        h3 It is designed to uniform system level apis
+        h3 Across Unix'y operating systems
       
       section(data-bespoke-backdrop='libuv')
         h3 "libuv wants to be agnostic to some platform specific nuances"
@@ -221,7 +226,7 @@ html
       section
         h3 Consequences for fs.watch on OSX?
         ul
-          li only poll based
+          li Only poll based
           li Doesn't report filenames
           li Doesn't report events at all when using editors like Sublime.
           li Often reports events twice.
@@ -246,6 +251,9 @@ html
           li chokidar (shim fsevents when neccessary)
 
       section
+        img(src='images/cannot-deal.gif' alt='I cannot deal with all of this' width='70%')
+
+      section
         h3 A slightly less seizure inducing flow graph
         img(src='images/watching-web.jpg' alt='a flow graph of what is going on in the dep tree' width='50%')
 
@@ -253,6 +261,9 @@ html
         h2 Every Picture Tells a Story
         h3 But Not the same Story
         h4 The Systems Bible by John Gall
+      
+      section(data-bespoke-backdrop='time-travel')
+        h1 Let's go back in time
 
       section(data-bespoke-backdrop='emphatic')
         h2 Go home Chokidar
