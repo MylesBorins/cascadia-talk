@@ -20,3 +20,20 @@ h1.fart {
     opacity: 1;
   }
 }
+
+#pokemon {
+  li {
+    &:not(.bespoke-bullet-current) {
+      display: none;
+    }
+    
+    list-style-type: none;
+    
+    img {
+      width: 50%;
+      margin-left: 25%;
+    }
+  }
+  .bespoke-bullet-current {
+  }
+}
