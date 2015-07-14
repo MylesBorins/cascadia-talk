@@ -1,6 +1,8 @@
 {
   "name": "presentation-its-not-me-its-you",
   "version": "0.0.0",
+  "repository": "https://github.com/TheAlphaNerd/cascadia-talk/",
+  "license": "MIT",
   "devDependencies": {
     "bespoke": "^1.0.0",
     "bespoke-backdrop": "^1.0.0",
